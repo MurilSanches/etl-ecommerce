@@ -14,17 +14,15 @@ bun run src/server.js
 
 This project was created using `bun init` in bun v1.2.12. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
 
-📦 Configuração das Variáveis de Ambiente
-Antes de rodar o projeto, é necessário criar um arquivo .env na raiz do projeto com as seguintes variáveis:
+# Configuração de Variáveis de Ambiente
 
-env
-Copiar
-Editar
-# Conexão com o banco de dados PostgreSQL (ex: Render, Railway, localhost)
-DB_URL=postgres://<usuario>:<senha>@<host>:<porta>/<database>
+Este projeto utiliza variáveis de ambiente para configurar as conexões com os bancos de dados PostgreSQL. Para isso, crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
 
-# Exemplo:
-# DB_URL=postgres://admin:1234@localhost:5432/ecommerce
-# DW_URL=postgres://admin:1234@localhost:5432/dw-ecommerce
+## Arquivo `.env`
 
-# (Opcional) Outras variáveis podem ser adicionadas conforme necessidade do projeto
+```env
+# URL de conexão com banco PostgreSQL principal
+DB_URL=postgres://<usuario>:<senha>@<host>:<porta>/<nome-do-banco>
+
+# URL de conexão com o banco do Data Warehouse
+DW_URL=postgres://<usuario>:<senha>@<host>:<porta>/dw-<nome-empresa>
